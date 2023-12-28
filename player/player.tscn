@@ -73,3 +73,6 @@ vframes = 3
 libraries = {
 "": SubResource("AnimationLibrary_sv4jw")
 }
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-22, -22, 0, -28, 21, -23, 31, 3, 17, 13, -16, 13, -29, 3)

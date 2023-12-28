@@ -14,6 +14,7 @@ public partial class playermovement : CharacterBody2D
 		ap = GetNode<AnimationPlayer>("AnimationPlayer");
 		player_sprite = GetNode<Sprite2D>("playerSprite");
 	}
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
@@ -38,18 +39,18 @@ public partial class playermovement : CharacterBody2D
 
 		//roll with q&e
 		if (Input.IsActionPressed("rotateleft")) 
-		{
-			player_sprite.Rotation += 1;
-		}
+			{
+				player_sprite.Rotation += 1;
+			}
 		
 		if (Input.IsActionPressed("rotateright")) 
-		{
-			player_sprite.Rotation -= 1;
-		}
+			{
+				player_sprite.Rotation -= 1;
+			}
 		if (Input.IsActionJustReleased("rotateleft") || Input.IsActionJustReleased("rotateright"))
-		{
-			player_sprite.Rotation = 0;
-		}
+			{
+				player_sprite.Rotation = 0;
+			}
 
 		MoveAndSlide();
 	}
